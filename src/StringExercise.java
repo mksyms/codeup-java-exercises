@@ -6,18 +6,21 @@ public class StringExercise {
 //      Do this with only one string variable and one print statement.
 
     public static void main(String[] args) {
+        String message;
 
-//        String message = "We don't need no education \nWe don't need no thought control";
-//        System.out.println(message);
+        message = "We don't need no education \nWe don't need no thought control";
+        message += "\n\n";
 
-//        String message = "Check \"this\" out!, \"s inside of \"s!";
-//        System.out.println(message);
+        message += "Check \"this\" out!, \"s inside of \"s!";
+        message += "\n\n";
 
-//        String message = "In windows, the main drive is usually C:\\";
-//        System.out.println(message);
+        message += "In windows, the main drive is usually C:\\";
+        message += "\n\n";
 
-//        String message = "I can do backslashes " + "\\" + ", " + "double backslashes " + "\\" + "\\" + ", \nand the amazing triple backslash " + "\\" + "\\" + "\\" + "!";
-//        System.out.println(message);
+        message += "I can do backslashes " + "\\" + ", " + "double backslashes " + "\\" + "\\" + ", \nand the amazing triple backslash " + "\\" + "\\" + "\\" + "!";
+        message += "\n\n";
+
+        System.out.println(message);
 
     }
 }
