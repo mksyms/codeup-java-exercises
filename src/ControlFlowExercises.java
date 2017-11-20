@@ -98,18 +98,105 @@ public class ControlFlowExercises {
 //                3      | 9       | 27                                         //
 //                4      | 16      | 64                                         //
 //                5      | 25      | 125                                        //
+//                                                                              //
+//        ----------------------------------------------------------------------//
+//        Scanner scan = new Scanner(System.in);
+//
+//        System.out.print("What number would you like to go up to?    ");
+//        int userInput = scan.nextInt();
+//
+//        System.out.println("\n Here is your Table!");
+//        System.out.println("\n number | squared | cubed");
+//        System.out.println("------ | ------- | ------");
+//
+//        for(int i = 1; i <= userInput; i += 1) {
+//            String output = "";
+//            output += String.format("%-7d", i);
+//            output += String.format("|%-9d", i * i);
+//            output += String.format("|%d", i * i * i);
+//            System.out.println(output);
+//        }
 
+
+        //once you have made your table, put it in a do-while loop
+        // boolean variable has to be outside of the loop because it's block scoped
+
+//        Scanner scan = new Scanner(System.in);
+//        boolean willContinue = true;
+//
+//        do {
+//            System.out.print("What number would you like to go up to?    ");
+//            int userInput = scan.nextInt();
+//
+//            System.out.println("\n Here is your Table!");
+//            System.out.println("\n number | squared | cubed");
+//            System.out.println("------ | ------- | ------");
+//
+//            for (int i = 1; i <= userInput; i += 1) {
+//                String output = "";
+//                output += String.format("%-7d", i);
+//                output += String.format("|%-9d", i * i);
+//                output += String.format("|%d", i * i * i);
+//                System.out.println(output);
+//            }
+//
+//            System.out.println();
+//
+//        } while (willContinue);
+
+//----------------------- Convert given number grades into letter grades.-----------//
+//        Prompt the user for a numerical grade from 0 to 100.                      //
+//        Display the corresponding letter grade.                                   //
+//        Prompt the user to continue.                                              //
+//        Assume that the user will enter valid integers for the grades.            //
+//        The application should only continue if the user agrees to.               //
+//                                                                                  //
+//        Grade Ranges:                                                             //
+//        A : 100 - 88                                                              //
+//        B : 87 - 80                                                               //
+//        C : 79 - 67                                                               //
+//        D : 66 - 60                                                               //
+//        F : 59 - 0                                                                //
 
         Scanner scan = new Scanner(System.in);
+        String userChoice;
 
-        System.out.print("What number would you like to go up to?    ");
-        int userInput = scan.nextInt();
+        do {
 
-        for(int i = 1; i <= userInput; i += 1) {
-            System.out.println("The number is " + i);
-            System.out.println("The number squared is " + Math.pow(i, 2));
-            System.out.println("The number cubed is " + Math.pow(i, 3));
-        }
+
+            System.out.println("Please enter a numeric grade: ");
+            int gradeEntered = scan.nextInt();
+            char letterGrade = ' ';
+
+            if (gradeEntered >= 88) {
+                letterGrade = 'A';
+            } else if (gradeEntered >= 80) {
+                letterGrade = 'B';
+            } else if (gradeEntered >= 67) {
+                letterGrade = 'C';
+            } else if (gradeEntered >= 60) {
+                letterGrade = 'D';
+            } else if (gradeEntered >= 0) {
+                letterGrade = 'F';
+            }
+
+            System.out.println(letterGrade);
+
+            System.out.println("\nDo you wish to continue? [y/n]");
+            userChoice = scan.next();
+
+        } while(userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes"));
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }
