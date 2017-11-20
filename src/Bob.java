@@ -33,14 +33,16 @@ public class Bob {
         Scanner scan = new Scanner(System.in);
 
         userInput = scan.nextLine();
-        System.out.print(userInput);
+        System.out.print("You said: " + userInput + "\n");
 
-        if (userInput.endsWith("?")) {
-            System.out.println("\'" + "Sure." + "\'");
-//        } else if (userInput.contains("!") || userInput.Character.isUpperCase(charAt)){
-//            System.out.println("\'" + "Whoa, chill out!" + "\'");
-//        } else if (userInput.)
-            System.out.println("");
+        if (userInput.trim().isEmpty()){
+            System.out.println("Bob: " + "Fine. Be that way!");
+        } else if (userInput.endsWith("?")) {
+            System.out.println("Bob: " + "Sure.");
+        } else if (userInput.contains("!") || userInput.equals(userInput.toUpperCase())) {
+            System.out.println("Bob: " + "Whoa, chill out!");
+        } else {
+            System.out.println("Bob: "+ "Whatever.");
         }
     }
 }
