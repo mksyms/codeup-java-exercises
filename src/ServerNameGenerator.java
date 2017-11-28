@@ -46,7 +46,7 @@ public class ServerNameGenerator {
 
         Random objectToGetRandomNum = new Random();
         int randomNumber = objectToGetRandomNum.nextInt(11);
-        System.out.println(adj[randomNumber] + "-" + nouns[randomNumber]);
+        System.out.println("Here is your server name:\n" + adj[randomNumber] + "-" + nouns[randomNumber]);
 
     }
 
