@@ -48,7 +48,6 @@ public class Input {
         }
     }
 
-
     public boolean yesNo(String prompt) {
         System.out.println(prompt);
 
@@ -81,7 +80,6 @@ public class Input {
 
     public double getInt(String prompt) {
         System.out.println(prompt);
-
         return this.scan.nextInt();
     }
 
@@ -99,6 +97,11 @@ public class Input {
     }
 
     public double getDouble(){
+        return this.scan.nextDouble();
+    }
+
+    public double getDouble(String prompt){
+        System.out.println(prompt);
         return this.scan.nextDouble();
     }
 }
