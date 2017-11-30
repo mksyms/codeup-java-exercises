@@ -6,26 +6,52 @@ public class Input {
     private Scanner scan;
 
     public Input() {
-    this.scan = new Scanner(System.in);
+        this.scan = new Scanner(System.in);
     }
 
 //    When an instance of this object is created,
 //    the scanner property should be set to a new instance of the Scanner class.
 //    The Class should have the following Methods:
-//      ( all of which return command line input from the user)
+//      (all of which return command line input from the user)
+
 //          - String getString()
+
 //          - boolean yesNo()
+
 //          - int getInt(int min, int max)
+
 //          - int getInt()
+
 //          - double getDouble(double min, double max)
+
 //          - double getDouble()
 
-    public String getstring() {
+
+    public String getString() {
         return this.scan.nextLine();
     }
 
 
-    public boolean yesNo() {
+    public String getString(String prompt) {
+        System.out.println(prompt);
+        return this.scan.nextLine();
+    }
+
+
+    public boolean yesNo(){
+        String input = this.scan.next();
+
+        if(input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes")){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    public boolean yesNo(String prompt) {
+        System.out.println(prompt);
+
         String input = this.scan.next();
 
         if(input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes")){
@@ -39,7 +65,7 @@ public class Input {
     public int getInt(int min, int max) {
         System.out.println("Please input an integer between " + min + " and " + max);
 
-        int userInput = this.getInt();
+        int userInput = this.scan.nextInt();
 
         if(userInput > max || userInput < min){
             return getInt(min, max);
@@ -50,6 +76,12 @@ public class Input {
 
 
     public int getInt() {
+        return this.scan.nextInt();
+    }
+
+    public double getInt(String prompt) {
+        System.out.println(prompt);
+
         return this.scan.nextInt();
     }
 
@@ -69,7 +101,4 @@ public class Input {
     public double getDouble(){
         return this.scan.nextDouble();
     }
-
-
-
 }
