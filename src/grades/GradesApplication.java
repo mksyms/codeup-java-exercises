@@ -3,10 +3,11 @@ package grades;
 import util.Input;
 
 import java.util.HashMap;
+import java.util.Map;
+
+import static grades.GradesApplication.displayPrompt;
 
 public class GradesApplication {
-
-    static Input input = new Input();
 
     public static void main(String[] args) {
 
@@ -42,15 +43,48 @@ public class GradesApplication {
         students.put("titosAndAzz", tito);
         students.put("potheticPooPooPeePeeButtHead", po);
 
+
         System.out.println();
         System.out.println("Welcome!");
-        System.out.println("Here are the github usernames of our students: \n"
+
+        displayPrompt(students);
+    }
+
+        public static void displayPrompt(HashMap<String, Student> students) {
+            Input input = new Input();
+            String userInput;
+
+        System.out.println();
+        System.out.println("Here are the github usernames of our students: \n \n"
                 + "|sukOnMI| "
                 + "|andSTEVEWillWalk500Miles| "
                 + "|titosAndAzz| "
                 + "|potheticPooPooPeePeeButtHead|");
 
+        System.out.println();
         System.out.println("What student would you like to see more information on?");
 
-    }
+        userInput = input.getString();
+            if(students.containsKey(userInput)) {
+                for (Map.Entry<String, Student> e : students.entrySet()) {
+                    if (e.getKey().equals(userInput)) {
+                        System.out.println();
+                        System.out.printf("Name: %s - Github Username: %s%n",e.getValue().getName(),e.getKey());
+                        System.out.printf("Current Average: %d%n%n",(int) e.getValue().getGradeAverage());
+                    }
+                }
+            } else {
+                System.out.printf("Sorry, no student found with the github username of " + userInput);
+                displayPrompt(students);
+            }
+
+            System.out.println("Would you like to see another student?");
+
+            if (input.yesNo()){
+                displayPrompt(students);
+            }
+
+            System.out.println("Goodbye, and have a wonderful day!");}
+
+
 }
