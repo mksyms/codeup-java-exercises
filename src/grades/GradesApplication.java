@@ -55,11 +55,9 @@ public class GradesApplication {
             String userInput;
 
         System.out.println();
-        System.out.println("Here are the github usernames of our students: \n \n"
-                + "|sukOnMI| "
-                + "|andSTEVEWillWalk500Miles| "
-                + "|titosAndAzz| "
-                + "|potheticPooPooPeePeeButtHead|");
+        for (String key : students.keySet()) {
+                System.out.print("|" + key + "| ");
+                }
 
         System.out.println();
         System.out.println("What student would you like to see more information on?");
@@ -79,12 +77,11 @@ public class GradesApplication {
             }
 
             System.out.println("Would you like to see another student?");
-
             if (input.yesNo()){
                 displayPrompt(students);
             }
-
             System.out.println("Goodbye, and have a wonderful day!");}
-
-
 }
+
+
+
