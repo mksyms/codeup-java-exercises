@@ -61,6 +61,22 @@ public class Input {
     }
 
 
+// =================================================== JAVA II EXCEPTIONS & ERROR
+//
+// Improve your Input class.
+//      Your getInt and getDouble methods
+//      should make sure that the value returned from the method
+//      is actually an int or a double.
+//
+//  Do this by using the following methods:
+//            Integer.valueOf(String s);
+//            Double.valueOf(String s);
+//
+//  Note these methods will throw a NumberFormatException
+//      if the given input cannot be parsed as an integer or double.
+//      Your methods on the input class should handle these exceptions.
+
+
     public int getInt(int min, int max) {
         System.out.println("Please input an integer between " + min + " and " + max);
 
@@ -73,16 +89,25 @@ public class Input {
         }
     }
 
-
     public int getInt() {
-        return this.scan.nextInt();
+        String userInput = this.scan.next();
+        try {
+            return Integer.valueOf(userInput);
+        } catch (NumberFormatException e) {
+            System.out.println("Your input must be a number");
+            System.out.println(e.getMessage());
+            return getInt();
+        }
     }
 
-    public double getInt(String prompt) {
-        System.out.println(prompt);
-        return this.scan.nextInt();
+    public int getInt(String prompt) {
+        String userInput = this.scan.next();
+        try {
+            return Integer.valueOf(userInput);
+        } catch (NumberFormatException e) {
+            return getInt(prompt);
+        }
     }
-
 
     public double getDouble(double min, double max) {
         System.out.println("Please input a decimal number between " + min + " and " + max);
@@ -100,8 +125,10 @@ public class Input {
         return this.scan.nextDouble();
     }
 
-    public double getDouble(String prompt){
+    public double getDouble(String prompt) {
         System.out.println(prompt);
         return this.scan.nextDouble();
     }
+
+
 }
