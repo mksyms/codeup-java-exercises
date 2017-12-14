@@ -1,4 +1,4 @@
-package src;
+//package src;
 
 public class Assessment {
 
@@ -38,6 +38,32 @@ public class Assessment {
     ///
 
     public static void main(String[] args) {
+  //1 number squared
+        System.out.println();
+        System.out.println("a number times itself is " + square(2));
+        System.out.println("a number times itself is " + square(-4));
+        System.out.println("a number times itself is " + square(0));
+        //int only no dbl for lossy conversion errpr
+
+        System.out.println();
+        //2 INT
+        System.out.println("if you add integers 5 + 6 together the sum is " + sum(5, 6));
+        System.out.println("if you add integers -7 + -8 together the sum is " + sum(-7, -8));
+        System.out.println("if you add integers 7 + -8 together the sum is " + sum(7, -8));
+
+        System.out.println();
+        //3 DOUBLES
+        System.out.println();
+        System.out.println("if you add the doubles 5.5 + 6.5 together the sum is " + sum(5.5, 6.5));
+        System.out.println("if you add the doubles -7.2 + -7.2 together the sum is " + sum(-7.2, -7.2));
+        System.out.println("if you add the doubles 0.1 + -0.5 together the sum is " + sum(0.1, -0.5));
+
+
+        // integer array and AVERAGE
+        System.out.println();
+        int[] integers = {5, 10, 15};
+        System.out.println( + average(integers) + " is the returned average for the passed numbers as a double.");
+
 
     }
     ///
