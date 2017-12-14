@@ -1,4 +1,7 @@
-//package src;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 public class Assessment {
 
@@ -33,12 +36,19 @@ public class Assessment {
             System.out.println(n);
             } */
 
+
+//    On your Assessment class create a static method named capitalizeRecords
+// ArrayList<Integer> numbers = new ArrayList<>();
+//      List Import & Inheritance
+//    The method should both accept and return an ArrayList of User objects.
+//    The returned list should have the same User objects in it, but each user's firstName and lastName properties should be properly capitalized. (i.e. the first letter of each property should be upper case)
+
 //MAIN METHOD ENTRY POINT ALL METHODS HAVE TO BE CALLED HERE TO RUN/TEST!!!
     //
     ///
 
     public static void main(String[] args) {
-  //1 number squared
+        //1 number squared
         System.out.println();
         System.out.println("a number times itself is " + square(2));
         System.out.println("a number times itself is " + square(-4));
@@ -62,12 +72,12 @@ public class Assessment {
         // integer array and AVERAGE
         System.out.println();
         int[] integers = {5, 10, 15};
-        System.out.println( + average(integers) + " is the returned average for the passed numbers as a double.");
+        System.out.println(+average(integers) + " is the returned average for the passed numbers as a double.");
 
 
     }
     ///
-  //
+    //
 //
 
 // 1
@@ -94,5 +104,20 @@ public class Assessment {
             sumTotal += integer;
         }
         return sumTotal / arrayOfIntegers.length;
+    }
+
+    //    On your Assessment class create a static method named capitalizeRecords
+// ArrayList<Integer> numbers = new ArrayList<>();
+//      List Import & Inheritance
+//    The method should both accept and return an ArrayList of User objects.
+//    The returned list should have the same User objects in it, but each user's firstName and lastName properties should be properly capitalized. (i.e. the first letter of each property should be upper case)
+    public static List<User> capitalizeRecords(List<User> users) {
+        ArrayList<User> capitolRecords = new ArrayList<>(users);
+
+        // 6 //
+        for (User user : users) {
+
+        }
+        return capitolRecords;
     }
 }
