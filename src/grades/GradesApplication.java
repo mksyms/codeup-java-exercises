@@ -5,7 +5,6 @@ import util.Input;
 import java.util.HashMap;
 import java.util.Map;
 
-import static grades.GradesApplication.displayPrompt;
 
 public class GradesApplication {
 
@@ -81,6 +80,10 @@ public class GradesApplication {
                 displayPrompt(students);
             }
             System.out.println("Goodbye, and have a wonderful day!");}
+
+// ====================================== BONUS
+//      Display all of the student's grades in addition to the grade average
+//      Allow the user to view all of the grades for all of the students
 }
 
 

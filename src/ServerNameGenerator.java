@@ -51,8 +51,6 @@ public class ServerNameGenerator {
     }
 
 
-
-
 //    Create a method that will return a random element from an array of strings
 
     public static String getRandomString(String[] strings) {
